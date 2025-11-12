@@ -1,0 +1,52 @@
+{
+  "Python/0": {
+    "pass": true,
+    "steps": 3,
+    "body": "def has_close_elements(numbers: List[float], threshold: float) -> bool:\n    for idx, elem in enumerate(numbers):\n        for idx2, elem2 in enumerate(numbers):\n            if idx != idx2:\n                distance = abs(elem - elem2)\n                if distance < threshold:\n                    return True\n    return False"
+  },
+  "Python/1": {
+    "pass": false,
+    "steps": 3,
+    "last_log": "ASSERTION: \n"
+  },
+  "Python/2": {
+    "pass": true,
+    "steps": 1,
+    "body": "return number % 1.0"
+  },
+  "Python/3": {
+    "pass": true,
+    "steps": 3,
+    "body": "balance = 0\nfor op in operations:\n    balance += op\n    if balance < 0:\n        return True\nreturn False"
+  },
+  "Python/4": {
+    "pass": true,
+    "steps": 3,
+    "body": "def mean_absolute_deviation(numbers: List[float]) -> float:\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)"
+  },
+  "Python/5": {
+    "pass": false,
+    "steps": 3,
+    "last_log": "ASSERTION: \n"
+  },
+  "Python/6": {
+    "pass": false,
+    "steps": 3,
+    "last_log": "Traceback (most recent call last):\n  File \"/work/run_tests.py\", line 4, in <module>\n    import solution  # ensure syntax/import ok\n    ^^^^^^^^^^^^^^^\n  File \"/work/solution.py\", line 7\n    The example shows that the solution code is inside a function, but when the code_exec tool is used, it's not able to run because the function is not defined. Oh right, the user's code is in a separate file, but the code_exec tool is supposed to run the solution code. Wait, the user's code is in a separate file, but the code_exec tool requires the solution code and test code. But in their example, they have the solution code inside a function. Wait, maybe the code_exec tool is supposed to run the solution code, but the code is not properly enclosed. Let me think.\n                                                                                                                                                                                                                                                                                              ^\nSyntaxError: unterminated string literal (detected at line 7)\n"
+  },
+  "Python/7": {
+    "pass": false,
+    "steps": 3,
+    "last_log": "ASSERTION: \n"
+  },
+  "Python/8": {
+    "pass": true,
+    "steps": 1,
+    "body": "def sum_product(numbers: List[int]) -> Tuple[int, int]:\n    sum_value = 0\n    prod_value = 1\n    if not numbers:\n        return (0, 1)\n    for n in numbers:\n        sum_value += n\n        prod_value *= n\n    return sum_value, prod_value"
+  },
+  "Python/9": {
+    "pass": true,
+    "steps": 1,
+    "body": "running_max = None\nresult = []\nfor n in numbers:\n    if running_max is None:\n        running_max = n\n    else:\n        running_max = max(running_max, n)\n    result.append(running_max)\nreturn result"
+  }
+}
